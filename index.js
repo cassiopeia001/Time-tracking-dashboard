@@ -17,14 +17,25 @@ function fetchData() {
 }
 
 function updateTime(time){
+
+  let previous;
+
+  switch (time){
+
+    case 'daily': previous= 'Yesterday'; break;
+    case 'weekly': previous= 'Last Week'; break;
+    case 'monthly': previous= 'Last Month'; break;
+  }
+
   data.forEach(item=>{
     const activityDiv=document.querySelector(`.activity-div.${item.title.toLowerCase()}`);
+
     if(activityDiv){
       const currentHours=activityDiv.querySelector('.div-1 h1');
       const previousHours=activityDiv.querySelector('.div-1 p');
 
       currentHours.innerHTML=`${item.timeframes[time].current}hrs`;
-      previousHours.innerHTML=`Previous - ${item.timeframes[time].previous} hrs`;
+      previousHours.innerHTML=`${previous} - ${item.timeframes[time].previous} hrs`;
 
     }
   });
