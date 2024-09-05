@@ -1,0 +1,207 @@
+*, ::after, ::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --Blue: hsl(246, 80%, 60%);
+    --Light-orange: hsl(15, 100%, 70%);
+    --Soft-blue: hsl(195, 74%, 62%);
+    --Light-red : hsl(348, 100%, 68%);
+    --Lime-green: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --Soft-orange: hsl(43, 84%, 65%);
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+    font-size: 18px;
+}
+body{
+    font-family: "Rubik", sans-serif;
+    min-height: 100vh;
+    background-color: var(--Very-dark-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.grid-container{
+    width: 60%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+.info-div{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: var(--Dark-blue);
+    border-radius: 0.75rem;
+}
+.id-div{
+    background-color: var(--Blue);
+    border-radius: 0.75rem;
+    padding: 1.5rem 1rem 3rem 1.25rem;
+}
+.id-div img{
+    width: 3.5rem;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-bottom: 1.5rem;
+}
+p{
+    color: var(--Pale-Blue);
+    font-size: 0.75rem;
+}
+.id-div h1{
+    color: white;
+    font-weight: 300;
+    margin-top: 0.3rem;
+}
+.small-section{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.small-section span{
+    color: var(--Desaturated-blue);
+    margin-bottom: 0.75rem;
+    font-size: 0.75rem;
+}
+.small-section input {
+    display: none;
+  }
+.small-section input:hover+ span, 
+.small-section input:checked+ span{
+    color: white;
+    cursor: pointer;
+}
+.activity-div{
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;    
+}
+.stats-div{
+    border-radius: 0.75rem;
+    background-color: var(--Dark-blue);
+    height: 82%;
+    padding: 1rem;  
+    
+}
+
+.stats-div:hover,
+.stats-div:focus{
+    background-color: var(--Desaturated-blue);
+    cursor: pointer;
+
+}
+.div-0{
+    display: flex ;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    
+}
+.div-0 h4{
+    color: white;
+    font-size: .8rem;
+    font-weight: 500;
+}
+.div-0 img{
+    width: 0.7rem;
+    height: 0.2rem;
+}
+.div-0 img:hover{
+    cursor: pointer;
+}
+.div-1 h1{
+    font-size: 2rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 0.3rem;
+}
+
+.work{
+    background-image: url(images/icon-work.svg);
+    background-repeat: no-repeat;
+    background-position: 85% -5%;
+    background-size: 35%;
+    background-color: var(--Light-orange);
+}
+.play{
+    background-image: url(images/icon-play.svg);
+    background-repeat: no-repeat;
+    background-position: 85% -5%;
+    background-size: 35%;
+    background-color: var(--Soft-blue);
+}
+.study{
+    background-image: url(images/icon-study.svg);
+    background-repeat: no-repeat;
+    background-position: 85% -5%;
+    background-size: 35%;
+    background-color: var(--Light-red);
+}
+.exercise{
+    background-image: url(images/icon-exercise.svg);
+    background-repeat: no-repeat;
+    background-position: 85% 0%;
+    background-size: 35%;
+    background-color: var(--Lime-green);
+}
+.social{
+    background-image: url(images/icon-social.svg);
+    background-repeat: no-repeat;
+    background-position: 85% -5%;
+    background-size: 35%;
+    background-color: var(--Violet);
+}
+.selfcare{
+    background-image: url(images/icon-self-care.svg);
+    background-repeat: no-repeat;
+    background-position: 85% -5%;
+    background-size: 35%;
+    background-color: var(--Soft-orange);
+}
+@media screen and (max-width: 650px){
+    :root{
+        font-size: 16px;
+    }
+    .grid-container{
+        /* grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;*/
+        gap: 1rem; 
+        display: flex;
+        flex-direction: column;
+        width: 90%;    
+        margin: 2rem;
+    }
+  
+    .id-div{
+        display: flex;
+        align-items: center;
+        padding:1.5rem;
+    }
+    .id-div img{
+        margin-bottom: 0;
+        margin-right: 1rem;
+    }
+    .small-section{
+        display: flex;
+        justify-content: space-between;
+    }
+    .div-1{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+   .activity-div{
+    height: 8rem;
+   }
+}

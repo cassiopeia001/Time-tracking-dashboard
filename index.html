@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <script defer src="index.js"></script>
+
+</head>
+<body>
+
+  <section class="grid-container">
+
+    <div class="info-div">
+      <div class="id-div">
+        <img src="images/image-jeremy.png" alt="jeremy">
+        <div class="name-div">
+          <p>Report for</p>
+          <h1>Jeremy Robson</h1>
+        </div>
+      </div>
+      <div class="small-section">
+
+        <label for="daily">
+          <input type="radio" name="timeframe" id="daily" checked onclick="showDaily()">
+          <span>Daily</span>
+        </label>
+        <label for="weekly">
+          <input type="radio" name="timeframe" id="weekly" onclick="showWeekly()">
+          <span>Weekly</span>
+        </label>
+        <label for="monthly">
+          <input type="radio" name="timeframe" id="monthly" onclick="showMonthly()">
+          <span>Monthly</span>
+        </label>
+        <!-- <p id="daily" onclick="showDaily()">Daily</p>
+        <p id="weekly" onclick="showWeekly()">Weekly</p>
+        <p id="monthly" onclick="showMonthly()">Monthly</p> -->
+      </div>
+    </div>
+   
+    <div class="activity-div work">
+      <div class="stats-div">
+        <div class="div-0">
+          <h4>Work</h4>
+          <img src="images/icon-ellipsis.svg">
+        </div>
+        <div class="div-1">
+          <h1>5hrs <!-- daily --></h1>
+          <p>Previous - 7hrs <!-- daily --></p>
+        </div>
+      </div>
+  </div>
+
+  <div class="activity-div play">
+    <div class="stats-div">
+      <div class="div-0">
+        <h4>Play</h4>
+        <img src="images/icon-ellipsis.svg">
+      </div>
+      <div class="div-1">
+        <h1>1hr <!-- daily --></h1>
+        <p>Previous - 2hrs <!-- daily --></p>
+      </div>
+    </div>
+
+  </div>
+  <div class="activity-div study">
+    <div class="stats-div">
+      <div class="div-0">
+        <h4>Study</h4>
+        <img src="images/icon-ellipsis.svg">
+      </div>
+      <div class="div-1">
+        <h1>40hrs</h1>
+        <p>Previous - 1hr <!-- daily --> </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="activity-div exercise">
+    <div class="stats-div">
+      <div class="div-0">
+      <h4>Exercise</h4>
+      <img src="images/icon-ellipsis.svg">
+      </div>
+      <div class="div-1">
+        <h1>1hr <!-- daily --></h1>
+        <p>Previous - 1hr <!-- daily --></p>
+      </div>
+    </div>
+  </div>
+  <div class="activity-div social">
+    <div class="stats-div">
+      <div class="div-0">
+        <h4>Social</h4>
+        <img src="images/icon-ellipsis.svg"> 
+      </div>
+      <div class="div-1">
+        <h1>1hr <!-- daily --></h1>
+        <p>Previous - 3hrs <!-- daily --></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="activity-div selfcare">
+    <div class="stats-div">
+      <div class="div-0">
+        <h4>Self Care</h4>
+        <img src="images/icon-ellipsis.svg">
+      </div>
+      <div class="div-1">
+        <h1>0hrs <!-- daily --></h1>
+        <p>Previous - 1hr <!-- daily --></p>
+      </div>
+  
+    </div>
+  </div>
+
+  </section>
+
+</body>
+</html>
