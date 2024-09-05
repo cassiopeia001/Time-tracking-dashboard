@@ -194,7 +194,9 @@ p{
     }
     .small-section{
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
+       
     }
     .div-1{
         display: flex;
